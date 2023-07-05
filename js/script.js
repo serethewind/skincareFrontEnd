@@ -50,6 +50,7 @@ loginForm.addEventListener('submit', (event) => {
   .then(response => response.json())
   .then(data => {
     // Handle the response from the server
+    window.location.href = 'welcome.html';
     console.log(data);
     // Perform any necessary actions after successful login
     alert("login successful");
@@ -93,6 +94,7 @@ signUpForm.addEventListener('submit', (event) => {
   .then(response => response.json())
   .then(data => {
     // Handle the response from the server
+    window.location.href = 'welcome.html';
     console.log(data);
     // Perform any necessary actions after successful login
     alert("login successful");
