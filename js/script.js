@@ -47,13 +47,20 @@ loginForm.addEventListener('submit', (event) => {
     },
     body: JSON.stringify(formData)
   })
-  .then(response => response.json())
+  .then(response => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('Login failed');
+    }
+  })
   .then(data => {
-    // Handle the response from the server
+    const { token } = data;
+  
+    // Store the token in localStorage or sessionStorage
+    localStorage.setItem('token', token);
+    // Redirect to the authenticated section of your application or perform other necessary actions
     window.location.href = 'welcome.html';
-    console.log(data);
-    // Perform any necessary actions after successful login
-    alert("login successful");
   })
   .catch(error => {
     // Handle any errors that occurred during the request
@@ -91,13 +98,15 @@ signUpForm.addEventListener('submit', (event) => {
     },
     body: JSON.stringify(formData)
   })  
-  .then(response => response.json())
-  .then(data => {
-    // Handle the response from the server
-    window.location.href = 'welcome.html';
-    console.log(data);
-    // Perform any necessary actions after successful login
-    alert("login successful");
+  .then(response => {
+    if (response.ok) {
+      // Registration successful
+      window.location.href = 'welcome.html';
+      alert("Registration successful");
+    } else {
+      // Registration failed
+      throw new Error('Registration failed');
+    }
   })
   .catch(error => {
     // Handle any errors that occurred during the request
