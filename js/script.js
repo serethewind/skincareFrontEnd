@@ -114,3 +114,7 @@ signUpForm.addEventListener('submit', (event) => {
     alert("Error occured. Please try again");
   });
 });
+
+
+//appointment-form
+
