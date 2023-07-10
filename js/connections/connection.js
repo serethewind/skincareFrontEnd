@@ -42,3 +42,5 @@ fetch('http://localhost:8080/api/health/v1/appointment', {
         console.error('An error occurred while sending form data to the server:', error);
       });
   });
+
+
