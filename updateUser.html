@@ -148,11 +148,37 @@
     </div>
 
     
-<main class="form-signin w-100 m-auto">
-  <form action="#" id="update-form">
-    <!-- <img class="mb-4" src="../assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+<main class=" w-100 m-auto">
+
+
+  <nav class="py-2 bg-body-tertiary border-bottom">
+    <div class="container d-flex flex-wrap">
+      <ul class="nav me-auto">
+        <li class="nav-item"><a href="#" class="nav-link px-2 active" aria-current="page">Welcome </a></li>
+      </ul>
+      <ul class="nav">
+        <li class="nav-item"><a href="/welcome.html" class="nav-link px-2">Back to homepage</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <form action="#" id="update-form" class="form-signin">
+    <!-- <img class="mb-4" src="" alt="" width="72" height="57"> -->
+    <!-- <a href="#" class="d-block link-dark text-decoration-none" aria-expanded="false">
+      <img src="" alt="mdo" width="72" height="57" class="rounded-circle">
+    </a> -->
+
+    
+
     <h1 class="h3 mb-3 fw-normal">Update your profile</h1>
 
+    <div class="profile-picture-container">
+      <img id="profile-picture" src="" alt="Profile Picture" class="rounded-circle">
+      <input type="file" id="profile-picture-input" accept="image/*" class="">
+      <label for="profile-picture-input" class="btn btn-primary">Change Picture</label>
+    </div>
+   
     <div class="form-floating">
       <input type="text" class="form-control" id="update-firstName" placeholder="John">
       <label for="update-firstName">First name</label>
