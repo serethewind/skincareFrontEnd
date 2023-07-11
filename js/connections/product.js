@@ -11,9 +11,10 @@ fetch('http://localhost:8080/api/health/v1/products')
 
     productElement.innerHTML =  `
     <div class="col">
-    <div class="card shadow-sm">
-      <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-      <div class="card-body">
+    <div class="card shadow-sm" style="width: 18rem;">
+    <img src=${product.imageUris} alt="" class="bd-placeholder-img card-img-top" width="50%" height="225">
+    
+      <div class="card-body bg-outline-dark">
         <p class="card-title fw-bold">${product.productName}</p>
         <p class="card-text">${product.description}</p>
         <p class="card-text"># ${product.price}</p>
@@ -24,7 +25,7 @@ fetch('http://localhost:8080/api/health/v1/products')
           <small class="text-body-secondary">in stock</small>
         </div>
       </div>
-    </div>
+    </div> 
   </div>
 `;
 
@@ -34,3 +35,9 @@ fetch('http://localhost:8080/api/health/v1/products')
   .catch(error => {
     console.error('Error:', error);
   });
+
+  // 
+
+{/* <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"focusable="false"><img src=${product.imageUris} alt="" class="bd-placeholder-img card-img-top" width="100%" height="225"></svg> */}
+  
+
