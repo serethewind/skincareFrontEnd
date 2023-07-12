@@ -55,10 +55,13 @@ loginForm.addEventListener('submit', (event) => {
     }
   })
   .then(data => {
-    const { token } = data;
+    const { userId, token, username } = data;
   
     // Store the token in localStorage or sessionStorage
     localStorage.setItem('token', token);
+    localStorage.setItem('userId', userId);
+    localStorage.setItem('username', username);
+    console.log(data);
     // Redirect to the authenticated section of your application or perform other necessary actions
     window.location.href = 'welcome.html';
   })
@@ -114,3 +117,7 @@ signUpForm.addEventListener('submit', (event) => {
     alert("Error occured. Please try again");
   });
 });
+
+
+//appointment-form
+

@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <title>Shop products at SkinLikeMilk</title>
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.112.5">
+    <title>Signin Template · Bootstrap v5.3</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
 
     
 
@@ -90,8 +92,10 @@
     </style>
 
     
+    <!-- Custom styles for this template -->
+    <link href="/css/updateUser.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -143,110 +147,92 @@
       </ul>
     </div>
 
-    <header class="p-3 text-bg-dark">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-          </a>
-  
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="/welcome.html" class="nav-link px-2 text-secondary">Home</a></li>
-            <!-- <li><a href="#" class="nav-link px-2 text-secondary">Orders</a></li> -->
-            <li><a href="checkout.html" class="nav-link px-2 text-secondary">Cart<span class="badge bg-primary rounded-pill align-text-bottom">0</span></a></li>
-          </ul>
-  
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="form-control form-control-dark text-bg-white" placeholder="Search products" aria-label="Search">
-          </form>
-        </div>
-      </div>
-    </header>    
+    
+<main class=" w-100 m-auto">
 
 
-<main>
-
-  <div class="px-4 pt-3 my-4 text-center border-bottom">
-    <h1 class="display-4 fw-bold text-body-emphasis">Product is one click away</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4 ">With just a single click, you can unlock a world of amazing products and services tailored to your needs. Start exploring now and experience the convenience of one-click shopping at its finest!</p>
+  <nav class="py-2 bg-body-tertiary border-bottom">
+    <div class="container d-flex flex-wrap">
+      <ul class="nav me-auto">
+        <li class="nav-item"><a href="#" class="nav-link px-2 active" aria-current="page">Welcome </a></li>
+      </ul>
+      <ul class="nav">
+        <li class="nav-item"><a href="/welcome.html" class="nav-link px-2">Back to homepage</a></li>
+      </ul>
     </div>
-    <div class="overflow-hidden" style="max-height: 50vh;">
-      <div class="container px-5">
-        <img src="images/product/mike-petrucci-c9FQyqIECds-unsplash.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
-      </div>
+  </nav>
+
+
+  <form action="#" id="update-form" class="form-signin">
+    <!-- <img class="mb-4" src="" alt="" width="72" height="57"> -->
+    <!-- <a href="#" class="d-block link-dark text-decoration-none" aria-expanded="false">
+      <img src="" alt="mdo" width="72" height="57" class="rounded-circle">
+    </a> -->
+
+    
+
+    <h1 class="h3 mb-3 fw-normal">Update your profile</h1>
+
+    <div class="profile-picture-container">
+      <img id="profile-picture" src="" alt="Profile Picture" class="rounded-circle">
+      <input type="file" id="profile-picture-input" accept="image/*" class="">
+      <label for="profile-picture-input" class="btn btn-primary">Change Picture</label>
     </div>
-  </div>
-
-  <div class="album py-5 bg-body-tertiary">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="productList">
-        
-      </div>
+   
+    <div class="form-floating">
+      <input type="text" class="form-control" id="update-firstName" placeholder="John">
+      <label for="update-firstName">First name</label>
     </div>
-  </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="update-otherName" placeholder="Alias">
+      <label for="update-otherName">Other name</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="update-lastName" placeholder="Doe">
+      <label for="update-lastName">Last name</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="update-username" placeholder="Doe">
+      <label for="update-userame">username</label>
+    </div>
+    <div class="form-floating">
+      <input type="email" class="form-control" id="update-email" placeholder="john@gmail.com">
+      <label for="update-email">Email</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="update-phoneNumber" placeholder="+234 0000 1111 222">
+      <label for="update-phoneNumber">Phone number</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="update-gender" placeholder="Male">
+      <label for="update-gender">Gender</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="update-address" placeholder="1 Avenue, Estate, World wide Web">
+      <label for="update-address">Address</label>
+    </div>
+    <div class="form-floating">
+      <input type="date" class="form-control" id="update-dob" placeholder="1 Avenue, Estate, World wide Web">
+      <label for="update-dob">Date of birth</label>
+    </div>
 
-  <div class="d-flex gap-2 justify-content-center py-5 text-center">
-    <a href="checkout.html"><button class="btn btn-primary d-inline-flex align-items-center text-center" type="button">
-      Go to checkout
-      <svg class="bi ms-1" width="20" height="20"><use xlink:href="#arrow-right-short"/></svg>
-    </button></a>
-  </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="update-nok" placeholder="James Doe">
+      <label for="update-nok">Next of Kin</label>
+    </div>
+    
 
-
+    <!-- <div class="form-check text-start my-3">
+      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Remember me
+      </label>
+    </div> -->
+    <button class="btn btn-primary w-100 py-2" type="submit">Update</button>
+  </form>
 </main>
-
-<div class="container">
-  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-    <div class="col mb-3">
-      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-      </a>
-      <p class="text-body-secondary">&copy; 2023</p>
-    </div>
-
-    <div class="col mb-3">
-
-    </div>
-
-    <div class="col mb-3">
-      <h5>Products</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-      </ul>
-    </div>
-
-    <div class="col mb-3">
-      <h5>Important-info</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-      </ul>
-    </div>
-
-    <div class="col mb-3">
-      <h5>Section</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-      </ul>
-    </div>
-  </footer>
-</div>
-<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-<script src="js/connections/product.js"></script>
-<script src="js/connections/cart.js"></script>
+<script src="js/bootstrap3.bundle.min.js"></script>
+<script src="js/connections/update.js"></script>
 
     </body>
 </html>
