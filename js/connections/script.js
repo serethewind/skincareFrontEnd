@@ -55,7 +55,7 @@ loginForm.addEventListener('submit', (event) => {
     }
   })
   .then(data => {
-    const { token, userId, username } = data;
+    const { userId, token, username } = data;
   
     // Store the token in localStorage or sessionStorage
     localStorage.setItem('token', token);
