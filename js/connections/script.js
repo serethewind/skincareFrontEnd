@@ -104,8 +104,9 @@ signUpForm.addEventListener('submit', (event) => {
   .then(response => {
     if (response.ok) {
       // Registration successful
-      window.location.href = 'welcome.html';
-      alert("Registration successful");
+      // window.location.href = 'welcome.html';
+      alert("Registration successful. Sign in to continue");
+      forms.classList.toggle("show-signup");
     } else {
       // Registration failed
       throw new Error('Registration failed');
@@ -119,5 +120,46 @@ signUpForm.addEventListener('submit', (event) => {
 });
 
 
-//appointment-form
 
+//reset-form
+const resetForm = document.getElementById('reset-form');
+
+resetForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevents the form from submitting normally
+
+  const username= document.getElementById('reset-username').value;
+  const password = document.getElementById('reset-password').value;
+  // Create an object with the form data
+  const formData = {
+    username: username,
+    password: password
+  };
+  // Send the post request
+  fetch('http://localhost:8080/api/health/v1/auth/reset-password', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(formData)
+  })
+.then(response => {
+    if (response.ok) {
+      // Password reset request successful
+      return response.json(); // Parse the response body as JSON
+    } else {
+      // Password reset request failed
+      throw new Error('Password reset failed');
+    }
+  })
+  .then(data => {
+    // Handle the response data
+    console.log('Password reset successful:', data);
+    window.location.href = 'signup.html';
+    // Perform any additional actions or display success message to the user
+  })
+  .catch(error => {
+    console.error('Error occurred during password reset:', error);
+    alert("Error occured. Please try again");
+    // Handle any network or other errors that occurred during the request
+  });
+});
