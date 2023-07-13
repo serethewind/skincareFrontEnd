@@ -1,5 +1,5 @@
   document.getElementById('logoutLink').addEventListener('click', function() {
-    fetch('http://localhost:8080/api/health/v1/auth/logout', {
+    fetch('https://skin-likemilk.onrender.com/api/health/v1/auth/logout', {
       method: 'GET',
       credentials: 'same-origin' // or 'include' if your backend and frontend are on different domains
     })

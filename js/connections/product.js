@@ -1,6 +1,6 @@
 const userId = localStorage.getItem('userId');
 
-fetch('http://localhost:8080/api/health/v1/products')
+fetch('https://skin-likemilk.onrender.com/api/health/v1/products')
   .then(response => response.json())
   .then(products => {
     const productListElement = document.getElementById('productList');

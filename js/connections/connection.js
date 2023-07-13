@@ -15,9 +15,9 @@ appointmentForm.addEventListener('submit', (event) => {
         username: username,
         message: message,
       };
-
+      
       // Send the post request
-fetch('http://localhost:8080/api/health/v1/appointment', {
+fetch('https://skin-likemilk.onrender.com/api/health/v1/appointment', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

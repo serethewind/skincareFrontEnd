@@ -13,7 +13,7 @@ resetForm.addEventListener('submit', (event) => {
     password: password
   };
   // Send the post request
-  fetch('http://localhost:8080/api/health/v1/auth/reset-password', {
+  fetch('https://skin-likemilk.onrender.com/api/health/v1/auth/reset-password', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

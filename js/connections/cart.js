@@ -11,7 +11,7 @@
         };
 
         // const productId = localStorage.getItem('productId');
-        fetch(`http://localhost:8080/api/health/v1/carts/addToCart`, {
+        fetch(`https://skin-likemilk.onrender.com/api/health/v1/carts/addToCart`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -1,4 +1,4 @@
-fetch('http://localhost:8080/api/v1/health/doctor')
+fetch('https://skin-likemilk.onrender.com/api/v1/health/doctor')
   .then(response => response.json())
   .then(doctors => {
     const doctorListElement = document.getElementById('doctorList');

@@ -40,7 +40,7 @@ loginForm.addEventListener('submit', (event) => {
     password: password
   };
   // Send the post request
-  fetch('http://localhost:8080/api/health/v1/auth/login', {
+  fetch('https://skin-likemilk.onrender.com/api/health/v1/auth/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -94,7 +94,7 @@ signUpForm.addEventListener('submit', (event) => {
       };
 
       // Send the post request
-    fetch('http://localhost:8080/api/health/v1/auth/register', {
+    fetch('https://skin-likemilk.onrender.com/api/health/v1/auth/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -135,7 +135,7 @@ resetForm.addEventListener('submit', (event) => {
     password: password
   };
   // Send the post request
-  fetch('http://localhost:8080/api/health/v1/auth/reset-password', {
+  fetch('https://skin-likemilk.onrender.com/api/health/v1/auth/reset-password', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
