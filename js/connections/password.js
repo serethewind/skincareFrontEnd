@@ -32,7 +32,7 @@ resetForm.addEventListener('submit', (event) => {
   .then(data => {
     // Handle the response data
     console.log('Password reset successful:', data);
-    alert("Password changed successfully. Sign in")
+    alert("Password changed successfully. Sign in to continue")
     window.location.href = 'signup.html';
     // Perform any additional actions or display success message to the user
   })

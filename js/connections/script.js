@@ -105,10 +105,11 @@ signUpForm.addEventListener('submit', (event) => {
     if (response.ok) {
       // Registration successful
       // window.location.href = 'welcome.html';
-      alert("Registration successful. Sign in to continue");
+      alert("Registration successful. Sign in to continue.");
       forms.classList.toggle("show-signup");
     } else {
       // Registration failed
+      alert("Registration failed. Try again later.")
       throw new Error('Registration failed');
     }
   })
