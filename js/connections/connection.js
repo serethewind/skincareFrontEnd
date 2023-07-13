@@ -6,7 +6,11 @@ appointmentForm.addEventListener('submit', (event) => {
   const username= document.getElementById('booking-form-name').value;
   const dateInput = document.getElementById('booking-form-date').value;
   const message = document.getElementById('booking-form-message').value;
+ 
+ 
   const token = localStorage.getItem('token');
+  
+  
   const inputDate = new Date(dateInput);
   const formattedDate = inputDate.toISOString();
     
